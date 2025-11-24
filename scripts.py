@@ -22,9 +22,17 @@ code_str="ZnJvbSBkamFuZ28uZGIgaW1wb3J0IG1vZGVscwoKCmNsYXNzIEN1cnJlbmN5\nKG1vZGVs
 
 
 
+import os
 from groq import Groq
 
-key="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"
+# Get API key from environment variable
+key = os.getenv("GROQ_API_KEY")
+
+if not key:
+    raise ValueError(
+        "GROQ_API_KEY environment variable is not set. "
+        "Please set it in your .env file or environment variables."
+    )
 
 
 def analyze_code_with_llm(file_content,file_name):

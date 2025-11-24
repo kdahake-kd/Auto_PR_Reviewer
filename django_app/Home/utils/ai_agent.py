@@ -1,9 +1,14 @@
-
+import os
 from groq import Groq
 
-key="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"
+# Get API key from environment variable
+key = os.getenv("GROQ_API_KEY")
 
-# key = os.getenv("GROQ_API_KEY")
+if not key:
+    raise ValueError(
+        "GROQ_API_KEY environment variable is not set. "
+        "Please set it in your .env file or environment variables."
+    )
 
 
 
