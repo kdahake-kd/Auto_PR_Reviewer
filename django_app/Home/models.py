@@ -6,3 +6,5 @@ class PRAnalysisResult(models.Model):
     pr_number = models.IntegerField()
     analysis_result = models.JSONField()  # Store the AI output as JSON
     created_at = models.DateTimeField(auto_now_add=True)  # Store timestamp
+
+

@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from Home.views import start_task,task_status_view
-from Home.views import get_pr_analysis
+from Home.views import start_task, task_status_view
 urlpatterns = [
-
     path('admin/', admin.site.urls),
-    path("start_task/",start_task),
-    path("task_status_view/<task_id>/",task_status_view),
+    path("start_task/", start_task, name='start_task'),
+    path("task_status_view/<str:task_id>/", task_status_view, name='task_status_view'),
     path('api/', include('Home.urls')),
 ]

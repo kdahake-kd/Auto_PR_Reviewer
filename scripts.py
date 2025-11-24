@@ -24,7 +24,7 @@ code_str="ZnJvbSBkamFuZ28uZGIgaW1wb3J0IG1vZGVscwoKCmNsYXNzIEN1cnJlbmN5\nKG1vZGVs
 
 from groq import Groq
 
-key="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"
+key="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"
 
 
 def analyze_code_with_llm(file_content,file_name):
